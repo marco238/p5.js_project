@@ -3,7 +3,9 @@ var angle;
 function setup() {
   var slider = document.getElementById('slider');
   var dog = document.getElementById('dog');
-  var dog = document.getElementById('cat');
+  var cat = document.getElementById('cat');
+  var title = document.getElementById('title');
+  var treeQuote = document.getElementById('treeQuote');
   angle = PI / 4;
   createCanvas(windowWidth, windowHeight);
 }
@@ -23,6 +25,17 @@ function draw() {
     dog.style.display = "none";
     cat.style.display = "none";
   }
+
+  title.style.opacity = 1 - (slider.value - 3.14);
+  treeQuote.style.opacity = 1 - (slider.value - 3.14);
+
+  // if (slider.value == 3.14) {
+  //   title.style.display = "block";
+  //   treeQuote.style.display = "block";
+  // } else {
+  //   title.style.display = "none";
+  //   treeQuote.style.display = "none";
+  // }
 }
 
 function branch(len) {

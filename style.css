@@ -1,8 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
 .range-field {
   position: absolute;
   width: 10%;
   bottom: 7%;
   left: 5%;
+}
+
+#title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Cabin Sketch', cursive;
+  color: rgb(0, 255, 0);
+  font-weight: 700;
+  font-size: 7vw;
+}
+
+#treeQuote {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-30%, -50%);
+  font-family: 'Dancing Script', cursive;
+  color: rgb(221, 221, 221);
+  font-weight: 100;
+  font-size: 1.7vw;
+  width: 30vw;
+  text-align: right;
 }
 
 #dog {
