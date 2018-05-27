@@ -2,6 +2,8 @@ var angle;
 
 function setup() {
   var slider = document.getElementById('slider');
+  var dog = document.getElementById('dog');
+  var dog = document.getElementById('cat');
   angle = PI / 4;
   createCanvas(windowWidth, windowHeight);
 }
@@ -10,9 +12,17 @@ function draw() {
   background(51);
   angle = slider.value;
 
-  translate(width / 2, height);
+  translate(width / 2, height - 30);
   stroke(102, 51, 0);
   branch(windowHeight * 0.33);
+
+  if (slider.value == 5.68) {
+    dog.style.display = "block";
+    cat.style.display = "block";
+  } else {
+    dog.style.display = "none";
+    cat.style.display = "none";
+  }
 }
 
 function branch(len) {
