@@ -1,6 +1,6 @@
 .range-field {
   position: absolute;
-  width: 20%;
+  width: 10%;
   bottom: 7%;
   left: 5%;
 }
@@ -10,10 +10,10 @@
   bottom: 2%;
   left: 5%;
   height: 7%;
-  animation: fingerDrag 6s ease-in-out infinite alternate;
+  animation: fingerDrag 4s ease-in infinite alternate;
 }
 
 @-webkit-keyframes fingerDrag {
     0%   {left:5%;}
-    100% {left:22%;}
+    100% {left:10%;}
 }

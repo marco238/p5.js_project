@@ -18,7 +18,7 @@ function draw() {
 function branch(len) {
 
   if (len < 10) {
-    stroke(0, 50, 0);
+    stroke(0, 250, 0);
     strokeWeight(4);
   }
   if (len >= 30) {
@@ -44,9 +44,28 @@ function branch(len) {
     rotate(angle);
     branch(len*0.67);
     pop();
+
     push();
     rotate(-angle);
     branch(len*0.67);
     pop();
+
+    if (len < 200) {
+      push();
+      translate(0, len / 2);
+      rotate(-angle);
+      stroke(0, 250, 0);
+      strokeWeight(2);
+      line(0, 0, 0, - len/15);
+      pop();
+
+      push();
+      translate(0, len / 2);
+      rotate(angle);
+      stroke(0, 250, 0);
+      strokeWeight(2);
+      line(0, 0, 0, - len/15);
+      pop();
+    }
   }
 }
