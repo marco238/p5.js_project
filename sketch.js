@@ -12,13 +12,13 @@ function draw() {
 
   translate(width / 2, height);
   stroke(102, 51, 0);
-  branch(300)
+  branch(windowHeight * 0.33);
 }
 
 function branch(len) {
 
   if (len < 10) {
-    stroke(0, 255, 0);
+    stroke(0, 50, 0);
     strokeWeight(4);
   }
   if (len >= 30) {
