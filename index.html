@@ -8,9 +8,10 @@
 	<title>first_P5_Project</title>
 
 	<script src="libraries/p5.js"></script>
-	<script src="libraries/p5.dom.js"></script>
-	<script src="libraries/p5.sound.js"></script>
+	<!-- <script src="libraries/p5.sound.js"></script> -->
 	<script src="sketch.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
 	<style>
 		body {
@@ -24,5 +25,12 @@
 	</style>
 </head>
 <body>
+	<form action="#">
+    <p class="range-field">
+      <input type="range" id="slider" min="0" max="6.28" step="0.01" />
+    </p>
+  </form>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 </body>
 </html>
