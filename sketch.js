@@ -1,14 +1,19 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  createCanvas(windowWidth, windowHeight);
 }
 function draw() {
-  background(50, 50, 50);
-  //move your mouse to change light position
-  var locX = mouseX - width / 2;
-  var locY = mouseY - height / 2;
+  background(51);
+  translate(width / 2, height);
+  stroke(255);
+  branch(300)
+}
 
-  pointLight(255, 255, 255, locX, locY, 50);
-  ambientMaterial(255);
-  noStroke();
-  sphere(35);
+function branch(len) {
+  line(0, 0, 0, - len);
+  translate(0, -len);
+  rotate(PI / 4);
+  line(0, 0, 0, - len*0.67);
+  if (len > 2) {
+    branch(len*0.67);
+  }
 }
