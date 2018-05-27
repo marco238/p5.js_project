@@ -11,16 +11,42 @@ function draw() {
   angle = slider.value;
 
   translate(width / 2, height);
-  stroke(255);
+  stroke(102, 51, 0);
   branch(300)
 }
 
 function branch(len) {
+
+  if (len < 10) {
+    stroke(0, 255, 0);
+    strokeWeight(4);
+  }
+  if (len >= 30) {
+    strokeWeight(1);
+  }
+  if (len >= 50) {
+    strokeWeight(2);
+  }
+  if (len >= 70) {
+    strokeWeight(4);
+  }
+  if (len >= 200) {
+    strokeWeight(6);
+  }
+  if (len >= 290) {
+    strokeWeight(12);
+  }
+
   line(0, 0, 0, - len);
   translate(0, -len);
-  rotate(angle);
-  line(0, 0, 0, - len*0.67);
-  if (len > 2) {
+  if (len > 4) {
+    push();
+    rotate(angle);
     branch(len*0.67);
+    pop();
+    push();
+    rotate(-angle);
+    branch(len*0.67);
+    pop();
   }
 }
